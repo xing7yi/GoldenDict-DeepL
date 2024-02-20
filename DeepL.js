@@ -1,10 +1,10 @@
 const axios = require("axios");
 require("dotenv").config({path: __dirname + "/.env"});
 
-// 获取命令行参数
-const arg = process.argv.slice(2)[0]; // 从第三个元素开始是真正的命令行参数
+// Get command line arguments
+const arg = process.argv.slice(2)[0]; // The real command line arguments start from the third element
 
-// 使用正则表达式匹配中文字符
+// Use regular expression to match Chinese characters
 const isChinese = /[\u4e00-\u9fa5]/.test(arg);
 
 const input = arg.trim();
